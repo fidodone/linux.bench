@@ -104,13 +104,13 @@ disk_used_size=$( calc_disk "${disk_size2[@]}" )
 
 clear
 next
-echo -e "Modelo da CPU       : ${BLUE}$cname${PLAIN}"
-echo -e "Número de Núcleos   : ${BLUE}$cores${PLAIN}"
+echo -e "Processador         : ${BLUE}$cname${PLAIN}"
+echo -e "Núcleos da CPU      : ${BLUE}$cores${PLAIN}"
 echo -e "Frequência da CPU   : ${BLUE}$freq MHz${PLAIN}"
 echo -e "Tamanho do Disco    : ${BLUE}$disk_total_size GB ($disk_used_size GB Used)${PLAIN}"
 echo -e "Memória RAM         : ${BLUE}$tram MB ($uram MB Used)${PLAIN}"
 echo -e "Tamanho SWAP        : ${BLUE}$swap MB ($uswap MB Used)${PLAIN}"
-echo -e "Tempo Ligado      : ${BLUE}$up${PLAIN}"
+echo -e "Tempo Ligado        : ${BLUE}$up${PLAIN}"
 echo -e "Load average        : ${BLUE}$load${PLAIN}"
 echo -e "OS                  : ${BLUE}$opsy${PLAIN}"
 echo -e "Arquitetura         : ${BLUE}$arch ($lbit Bit)${PLAIN}"
@@ -130,7 +130,7 @@ ioraw3=$( echo $io3 | awk 'NR==1 {print $1}' )
 [ "`echo $io3 | awk 'NR==1 {print $2}'`" == "GB/s" ] && ioraw3=$( awk 'BEGIN{print '$ioraw3' * 1024}' )
 ioall=$( awk 'BEGIN{print '$ioraw1' + '$ioraw2' + '$ioraw3'}' )
 ioavg=$( awk 'BEGIN{printf "%.1f", '$ioall' / 3}' )
-echo -e "Average I/O speed    : ${YELLOW}$ioavg MB/s${PLAIN}"
+echo -e "Average I/O speed     : ${YELLOW}$ioavg MB/s${PLAIN}"
 next
 printf "%-32s%-24s%-14s\n" "Node Name" "IPv4 address" "Download Speed"
 speed_v4 && speed_v4 && speed_v4
