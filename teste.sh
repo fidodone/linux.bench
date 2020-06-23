@@ -117,11 +117,11 @@ echo -e "Arquitetura         : ${BLUE}$arch ($lbit Bit)${PLAIN}"
 echo -e "Kernel              : ${BLUE}$kern${PLAIN}"
 next
 io1=$( io_test )
-echo -e "I/O speed (1st run)   : ${YELLOW}$io1${PLAIN}"
+echo -e "I/O speed (1st run) : ${YELLOW}$io1${PLAIN}"
 io2=$( io_test )
-echo -e "I/O speed (2nd run)   : ${YELLOW}$io2${PLAIN}"
+echo -e "I/O speed (2nd run) : ${YELLOW}$io2${PLAIN}"
 io3=$( io_test )
-echo -e "I/O speed (3rd run)   : ${YELLOW}$io3${PLAIN}"
+echo -e "I/O speed (3rd run) : ${YELLOW}$io3${PLAIN}"
 ioraw1=$( echo $io1 | awk 'NR==1 {print $1}' )
 [ "`echo $io1 | awk 'NR==1 {print $2}'`" == "GB/s" ] && ioraw1=$( awk 'BEGIN{print '$ioraw1' * 1024}' )
 ioraw2=$( echo $io2 | awk 'NR==1 {print $1}' )
