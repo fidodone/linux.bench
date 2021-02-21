@@ -13,7 +13,7 @@ except ImportError:
     #python2
     from HTMLParser import HTMLParser
          
-class cinecalidad(object):
+class cinequalidade(object):
     url = 'https://www.cinemaqualidade.li/'
     name = 'CinenaQualidade'
     supported_categories = {'all': 'all'}
@@ -85,5 +85,5 @@ class cinecalidad(object):
         parser.close()
 
 if __name__ == "__main__":
-    c = cinecalidad()
+    c = cinequalidade()
     c.search('tomb%20raider')
