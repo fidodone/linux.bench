@@ -15,7 +15,7 @@ except ImportError:
          
 class cinequalidade(object):
     url = 'https://www.cinemaqualidade.li/'
-    name = 'CinenaQualidade'
+    name = 'CinemaQualidade'
     supported_categories = {'all': 'all'}
     
     class MyHTMLParser(HTMLParser):
