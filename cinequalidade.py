@@ -1,5 +1,5 @@
-#VERSION: 1.0
-#AUTHORS: mauricci
+#VERSION: 1.1
+#AUTHORS: fidodone
 
 from helpers import retrieve_url
 from helpers import download_file, retrieve_url
@@ -14,7 +14,7 @@ except ImportError:
     from HTMLParser import HTMLParser
          
 class cinequalidade(object):
-    url = 'https://www.cinemaqualidade.li/'
+    url = 'https://www.cinemaqualidade.li'
     name = 'CinemaQualidade'
     supported_categories = {'all': 'all'}
     
