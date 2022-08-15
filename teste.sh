@@ -102,7 +102,6 @@ disk_size2=($( LANG=C df -hPl | grep -wvE '\-|none|tmpfs|devtmpfs|by-uuid|chroot
 disk_total_size=$( calc_disk "${disk_size1[@]}" )
 disk_used_size=$( calc_disk "${disk_size2[@]}" )
 
-clear
 next
 echo -e "Processador         : ${BLUE}$cname${PLAIN}"
 echo -e "Núcleos da CPU      : ${BLUE}$cores${PLAIN}"
